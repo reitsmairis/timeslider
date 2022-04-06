@@ -16,7 +16,7 @@ namespace Netherlands3D.TreeRoots
         public int maximumDistance = 3000;
         public List<Material> DefaultMaterialList = new List<Material>();
         public TileHandler tileHandler;
-        public int[] years;
+        private int[] years = { 2020, 2025, 2030, 2035, 2040, 2045, 2050, 2055, 2060 };
         List<BinaryMeshLayer> timeSliderLayers = new List<BinaryMeshLayer>();
         public Slider timeSlider;
 
@@ -81,7 +81,19 @@ namespace Netherlands3D.TreeRoots
 
                 timeSlider.SetValueWithoutNotify(newYear);
             }
+        }
+        public void ChangeOuterAlpha(float alpha)
+        {
+            int c = Array.IndexOf(years, (int)year);
 
+            //var currentColor = timeSliderLayers[c].DefaultMaterialList[0].color;
+            //print(currentColor);
+            //currentColor.a = alpha;
+            //timeSliderLayers[c].DefaultMaterialList[0].color = currentColor;
+
+            var currentFloat = timeSliderLayers[c].DefaultMaterialList[0].GetFloat("_BaseFloat");
+            currentFloat = alpha;
+            timeSliderLayers[c].DefaultMaterialList[0].SetFloat("_BaseFloat", currentFloat);
 
         }
     }

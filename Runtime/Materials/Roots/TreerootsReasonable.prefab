@@ -43,10 +43,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddeb1c2649acaea4d8083e92852478b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  year: 2020
+  layerName: Reasonable
+  basePath: file:///C:/Users/Iris Reitsma/Documents/Master/jaar 2/stage/root_model/output_bin/Wallengebied_small/treedict/reasonable/{year}/roots_{x}_{y}.1.bin
+  maximumDistance: 3000
   DefaultMaterialList:
   - {fileID: 2100000, guid: 2d9c38ddd2621234a97769c89336eaf5, type: 2}
   tileHandler: {fileID: 0}
   years: e4070000f80700000c080000
-  basePath: file:///C:/Users/Iris Reitsma/Documents/Master/jaar 2/stage/root_model/output_bin/reasonable/{year}/roots_{x}_{y}.1.bin
-  layerName: Reasonable
+  timeSlider: {fileID: 0}
